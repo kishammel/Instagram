@@ -8,8 +8,52 @@ bot = instaloader.Instaloader()
 #bot.login(user=username, passwd=password)
 
 #Profile allocation
-profile = instaloader.Profile.from_username(bot.context, 'kishammel')
-#print(profile.get_posts())
+publicprofile = instaloader.Profile.from_username(bot.context, 'brigiuhlar')
+privateprofile = instaloader.Profile.from_username(bot.context, 'klaaa_xx')
+businessprofile = instaloader.Profile.from_username(bot.context, 'kishammel')
+
+print("Publikus fiók")
+#print(publicprofile.get_comments())
+
+print("Privát fiók")
+#print(privateprofile.get_posts())
+print("Business fiók")
+#print(businessprofile.get_posts())
+#Explore post
+
+"""
+explore_posts= bot.get_explore_posts()
+for post in explore_posts:
+    # Print the post's caption and number of likes
+    print(f"Caption: {post.caption}")
+    print(f"Number of likes: {post.likes}")
+    print()
+ """
+"""
+#Feed posts
+feed_posts = bot.get_feed_posts()
+
+# Iterate over the feed posts
+for post in feed_posts:
+    # Print the post's caption and number of likes
+    print(f"Caption: {post.caption}")
+    print(f"Number of likes: {post.likes}")
+    print()
+ """
+"""
+#get_likes
+post_url = "https://www.instagram.com/p/CQ56bwHhvbj/"
+post = instaloader.Post.from_shortcode(bot.context, post_url)
+
+# Retrieve the likes for the post
+likes = post.get_likes()
+
+# Iterate over the likes
+for like in likes:
+    # Print the username of the user who liked the post
+    print(like.username)
+
+ """
 """""
 # returns if a proile is private
 private = profile.is_private
@@ -64,7 +108,7 @@ for post in posts:
 """
 
 
-
+""""
 post = instaloader.Post.from_shortcode(bot.context, 'CBAQLopB6d3')
 
 comments_from_loop_including_answers = []
@@ -76,5 +120,6 @@ for comment in post.get_comments():
 
 print(len(comments_from_loop_including_answers))
 print(post.comments)
+"""
 
 
