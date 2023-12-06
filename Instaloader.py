@@ -1,7 +1,7 @@
 import instaloader
 
-username = "nevtelentesztelo21"
-password = "zD}GR3X~@U"
+username = ""
+password = ""
 
 
 bot = instaloader.Instaloader()
