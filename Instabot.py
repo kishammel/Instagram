@@ -1,9 +1,9 @@
 from instabot import Bot
-#username = "nevtelentesztelo21"
-#password = "zD}GR3X~@U"
+#username = ""
+#password = ""
 
 bot = Bot()
-bot.login(username='nevtelentesztelo21', password='zD}GR3X~@U')
+bot.login(username='', password='')
 #fiókadatok megszerzése
 user_info = bot.get_user_info(username='target_username')
 print(user_info)
